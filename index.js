@@ -27,9 +27,9 @@ app.post('/pay', async (req, res) => {
   const reference = req.body.reference;
   const third_party_reference = req.body.third_party_reference;
 
-    // res.write(amount+" "+phone+" "+reference+" "+third_party_reference);
+     res.write(process.env.API_KEY);
 
-  if(amount && phone && reference && third_party_reference){
+  /*if(amount && phone && reference && third_party_reference){
     try {
         const response = await transaction.c2b({
           amount: amount,
@@ -43,7 +43,7 @@ app.post('/pay', async (req, res) => {
     }
   }else{
       res.write('Missing query parameters.');
-  }
+  }*/
   res.end();
 })
 
