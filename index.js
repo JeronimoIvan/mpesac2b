@@ -19,6 +19,8 @@ const config = {
     security_credential: process.env.SECURITY_CREDENTIAL,
 }
 
+const transaction = new Transaction(config);
+
 app.post('/pay', (req, res) => {
   const amount = req.body.amount;
   const phone = req.body.phone;
