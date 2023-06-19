@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World! '+ process.env.API_HOST)
 })
 
 app.post('/pay', (req, res) => {
