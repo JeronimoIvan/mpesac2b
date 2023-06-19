@@ -5,7 +5,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/pay', (req, res) => {
+app.get('/pay', (req, res) => {
   const amount = req.body.amount;
   const phone = req.body.phone;
   const reference = req.body.reference;
