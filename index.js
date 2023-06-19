@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send('J Hello World! ');
+  res.send('Hello World! ');
 })
 
 app.post('/pay', async (req, res) => {
@@ -29,7 +29,7 @@ app.post('/pay', async (req, res) => {
 
      res.write(amount+" "+phone+" "+reference+" "+third_party_reference);
 
-  /*if(amount && phone && reference && third_party_reference){
+  if(amount && phone && reference && third_party_reference){
     try {
         const response = await transaction.c2b({
           amount: amount,
@@ -43,7 +43,7 @@ app.post('/pay', async (req, res) => {
     }
   }else{
       res.write('Missing query parameters.');
-  }*/
+  }
   res.end();
 })
 
