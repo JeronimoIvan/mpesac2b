@@ -35,12 +35,14 @@ app.post('/pay', async (req, res) => {
           reference: reference,
           third_party_reference: third_party_reference
         });
-        res.json({ amount, phone, reference });
+        res.json(response);
     } catch (error) {
-      res.json(error);
+        res.json(error);
     }
+  }else{
+      res.write('Missing query parameters.');
   }
-   res.end();
+  res.end();
 })
 
 app.listen(process.env.PORT || 3000)
