@@ -5,8 +5,8 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/pay', (req, res) => {
-  const amount = "250";
+app.post('/pay', (req, res) => {
+  const amount = req.body.amount;
  // res.json({ amount});
   res.send(amount);
 })
