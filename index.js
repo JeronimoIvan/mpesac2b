@@ -29,7 +29,13 @@ app.post('/pay', (req, res) => {
 
   if(amount && phone && reference && third_party_reference){
     try {
-      res.json({ amount, phone, reference });
+        const response = await transaction.c2b({
+          amount: amount,
+          msisdn: phone,
+          reference: reference,
+          third_party_reference: third_party_reference
+        });
+        res.json({ amount, phone, reference });
     } catch (error) {
       res.json(error);
     }
