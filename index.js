@@ -27,7 +27,7 @@ app.post('/pay', async (req, res) => {
   const reference = req.body.reference;
   const third_party_reference = req.body.third_party_reference;
 
-     res.write(amount, phone, reference, thirdPartyReference);
+     res.write(amount);
 
   /*if(amount && phone && reference && third_party_reference){
     try {
