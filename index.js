@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pay', (req, res) => {
-  const amount = req.body.amount;
+  const amount = "250";
  // res.json({ amount});
   res.send(amount);
 })
