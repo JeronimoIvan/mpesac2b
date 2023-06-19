@@ -6,9 +6,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pay', (req, res) => {
- // const amount = req.body.amount;
+  const amount = req.body.amount;
  // res.json({ amount});
-  res.send('Hello World!')
+  res.send(amount);
 })
 
 app.listen(process.env.PORT || 3000)
