@@ -1,11 +1,12 @@
 const express = require('express')
+const transaction = require('./transaction.js');
 const app = express()
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send('Hello World! '+ process.env.API_HOST)
+  res.send('Hello World! ');
 })
 
 app.post('/pay', (req, res) => {
