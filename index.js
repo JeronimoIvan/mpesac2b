@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const Transaction = require('mpesa-mz-nodejs-lib');
 const app = express()
 
 app.use(express.json());
