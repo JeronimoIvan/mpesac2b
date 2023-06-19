@@ -14,8 +14,10 @@ app.post('/pay', (req, res) => {
   const reference = req.body.reference;
   const third_party_reference = req.body.third_party_reference;
 
- // res.json({ amount});
-  res.json({ amount, phone, reference, third_party_reference });
+  if(amount && phone && reference && third_party_reference){
+    res.json({ amount, phone, reference, third_party_reference });
+  }
+   res.end();
 })
 
 app.listen(process.env.PORT || 3000)
