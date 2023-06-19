@@ -28,7 +28,8 @@ app.post('/pay', (req, res) => {
   const third_party_reference = req.body.third_party_reference;
 
   if (amount && phone && reference && third_party_reference) {
-      try {
+    res.send('Hello World! yess');
+    /*  try {
         const response = await transaction.c2b({
           amount: amount,
           msisdn: phone,
@@ -46,7 +47,7 @@ app.post('/pay', (req, res) => {
     } else {
       res.writeHead(400, {'Content-Type': 'text/plain'});
       res.write('Missing query parameters.');
-      res.end();
+      res.end();*/
     }
  // res.json({ amount});
   //res.json({ amount, phone, reference, third_party_reference });
