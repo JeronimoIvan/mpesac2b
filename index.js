@@ -41,7 +41,7 @@ app.post("/pay", async (req, res) => {
       ("0" + date.getSeconds()).slice(-2) +
       ("0" + date.getMilliseconds()).slice(-2);
 
-      res.write(timestamp);
+      //res.write(timestamp);
 
     try {
         const response = await transaction.c2b({
