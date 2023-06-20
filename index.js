@@ -29,7 +29,7 @@ app.post("/pay", async (req, res) => {
 
   // res.write(process.env.API_KEY);
 
-  if (amount && phone)// && reference && third_party_reference) {
+  if (amount && phone){// && reference && third_party_reference) {
     const date = new Date();
 
     const timestamp =
