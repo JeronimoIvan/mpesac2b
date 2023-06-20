@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
 app.post("/pay", async (req, res) => {
   const amount = req.body.amount;
   const phone = req.body.phone;
-  const reference = req.body.reference;
-  const third_party_reference = req.body.third_party_reference;
+  //const reference = req.body.reference;
+  //const third_party_reference = req.body.third_party_reference;
 
   // res.write(process.env.API_KEY);
 
@@ -43,17 +43,17 @@ app.post("/pay", async (req, res) => {
 
       res.write(timestamp);
 
-    /*try {
+    try {
         const response = await transaction.c2b({
           amount: amount,
           msisdn: phone,
-          reference: reference,
-          third_party_reference: third_party_reference
+          reference: "Codigo e Sinais",
+          third_party_reference: timestamp
         });
         res.json(response);
     } catch (error) {
         res.json(error);
-    }*/
+    }
   } else {
     res.write("Missing query parameters.");
   }
