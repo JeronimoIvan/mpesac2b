@@ -30,19 +30,8 @@ app.post('/pay', async (req, res) => {
     // res.write(process.env.API_KEY);
 
   if(amount && phone && reference && third_party_reference){
-
-const date = new Date();
-const third_party_reference = date.getFullYear() + 
-("0" + (date.getMonth() + 1)).slice(-2)+
-("0" + date.getDate()).slice(-2)+
-("0" + date.getHours()).slice(-2)+
-("0" + date.getMinutes()).slice(-2)+
-("0" + date.getSeconds()).slice(-2)+
-("0" + date.getMilliseconds()).slice(-2);
-
-     res.write(third_party_reference);
       
-    /*try {
+    try {
         const response = await transaction.c2b({
           amount: amount,
           msisdn: phone,
@@ -52,7 +41,7 @@ const third_party_reference = date.getFullYear() +
         res.json(response);
     } catch (error) {
         res.json(error);
-    }*/
+    }
   }else{
       res.write('Missing query parameters.');
   }
