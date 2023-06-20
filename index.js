@@ -31,7 +31,7 @@ app.post('/pay', async (req, res) => {
 
   if(amount && phone && reference && third_party_reference){
 
-
+const date = new Date();
 const third_party_reference = date.getFullYear() + 
 ("0" + (date.getMonth() + 1)).slice(-2)+
 ("0" + date.getDate()).slice(-2)+
