@@ -25,7 +25,7 @@ app.post('/pay', async (req, res) => {
   const amount = req.body.amount;
   const phone = req.body.phone;
   const reference = req.body.reference;
-  //const third_party_reference = req.body.third_party_reference;
+  const third_party_reference = req.body.third_party_reference;
 
     // res.write(process.env.API_KEY);
 
