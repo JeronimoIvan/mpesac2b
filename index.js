@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Hello World! ");
 });
 
-app.post("/pay", async (req, res) => {
+app.get("/pay", async (req, res) => {
   const amount = req.body.amount;
   const phone = req.body.phone;
   //const reference = req.body.reference;
