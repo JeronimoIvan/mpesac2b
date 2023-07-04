@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/pay", async (req, res) => {
+
+  res.send("Hello World! ");
+
+  /*
   //const amount = req.body.amount;
   //const phone = req.body.phone;
   //const reference = req.body.reference;
@@ -57,7 +61,7 @@ app.get("/pay", async (req, res) => {
   } else {
     res.write("Missing query parameters.");
   }
-  res.end();
+  res.end();*/
 });
 
 app.listen(process.env.PORT || 3000);
