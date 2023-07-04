@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.send("Hello World! ");
 });
 
+app.get("/pay1", (req, res) => {
+  res.send("Hello World! ");
+});
+
 app.get("/pay", (req, res) => {
 
   res.send("Hello World! ");
