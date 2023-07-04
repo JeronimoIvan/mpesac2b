@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/pay", async (req, res) => {
-  const amount = req.body.amount;
-  const phone = req.body.phone;
+  //const amount = req.body.amount;
+  //const phone = req.body.phone;
   //const reference = req.body.reference;
   //const third_party_reference = req.body.third_party_reference;
 
@@ -45,8 +45,8 @@ app.get("/pay", async (req, res) => {
 
     try {
         const response = await transaction.c2b({
-          amount: amount,
-          msisdn: phone,
+          amount: 250,
+          msisdn: 840172008,
           reference: "Codigo e Sinais",
           third_party_reference: timestamp
         });
