@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 app.get("/pay", async (req, res) => {
 
 //  const amount = "250";
-  const amount = req.get("amount");
+  const amount = req.query.amount;
   const phone = "840172008";
   //const reference = req.body.reference;
   //const third_party_reference = req.body.third_party_reference;
