@@ -21,17 +21,10 @@ app.get("/", (req, res) => {
   res.send("Hello World! ");
 });
 
-app.get("/pay1", (req, res) => {
-  res.send("Hello World! ");
-});
-
 app.get("/pay", (req, res) => {
 
-  res.send("Hello World! ");
-
-  /*
-  //const amount = req.body.amount;
-  //const phone = req.body.phone;
+  const amount = req.body.amount;
+  const phone = req.body.phone;
   //const reference = req.body.reference;
   //const third_party_reference = req.body.third_party_reference;
 
@@ -53,8 +46,8 @@ app.get("/pay", (req, res) => {
 
     try {
         const response = await transaction.c2b({
-          amount: 250,
-          msisdn: 840172008,
+          amount: amount,
+          msisdn: phone,
           reference: "Codigo e Sinais",
           third_party_reference: timestamp
         });
@@ -65,7 +58,7 @@ app.get("/pay", (req, res) => {
   } else {
     res.write("Missing query parameters.");
   }
-  res.end();*/
+  res.end();
 });
 
 app.listen(process.env.PORT || 3000);
