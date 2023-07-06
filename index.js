@@ -52,12 +52,14 @@ app.get("/pay", async (req, res) => {
           reference: "Codigo e Sinais",
           third_party_reference: timestamp
         });
-        res.json(response);
+      //  res.json(response);
+       res.send(response.output_ResponseCode);
     } catch (error) {
-        res.json(error);
+       // res.json(error);
+       res.send(error);
     }
   } else {
-    res.write("Missing query parameters.");
+    res.send("Missing query parameters.");
   }
   res.end();
 });
